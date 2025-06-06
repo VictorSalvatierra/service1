@@ -1,0 +1,19 @@
+image: node:18
+
+stages:
+  - install
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+
+#deploy_ec2:
+  #stage: deploy
+  #script:
+    #- desplegar los cambios en ec2
